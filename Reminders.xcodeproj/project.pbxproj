@@ -11,6 +11,9 @@
 		2A25090F28E66A5E009F6ED2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25090E28E66A5E009F6ED2 /* ContentView.swift */; };
 		2A25091128E66A5F009F6ED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A25091028E66A5F009F6ED2 /* Assets.xcassets */; };
 		2A25091428E66A5F009F6ED2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A25091328E66A5F009F6ED2 /* Preview Assets.xcassets */; };
+		2A25091B28E66A8F009F6ED2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25091A28E66A8F009F6ED2 /* ContentViewModel.swift */; };
+		2A25091D28E66AB7009F6ED2 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25091C28E66AB7009F6ED2 /* EventManager.swift */; };
+		2A25091F28E66B6A009F6ED2 /* AddRemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25091E28E66B6A009F6ED2 /* AddRemindersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		2A25090E28E66A5E009F6ED2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2A25091028E66A5F009F6ED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A25091328E66A5F009F6ED2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2A25091A28E66A8F009F6ED2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		2A25091C28E66AB7009F6ED2 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		2A25091E28E66B6A009F6ED2 /* AddRemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemindersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				2A25090C28E66A5E009F6ED2 /* RemindersApp.swift */,
 				2A25090E28E66A5E009F6ED2 /* ContentView.swift */,
+				2A25091E28E66B6A009F6ED2 /* AddRemindersView.swift */,
+				2A25091A28E66A8F009F6ED2 /* ContentViewModel.swift */,
+				2A25091C28E66AB7009F6ED2 /* EventManager.swift */,
 				2A25091028E66A5F009F6ED2 /* Assets.xcassets */,
 				2A25091228E66A5F009F6ED2 /* Preview Content */,
 			);
@@ -139,6 +148,9 @@
 			files = (
 				2A25090F28E66A5E009F6ED2 /* ContentView.swift in Sources */,
 				2A25090D28E66A5E009F6ED2 /* RemindersApp.swift in Sources */,
+				2A25091D28E66AB7009F6ED2 /* EventManager.swift in Sources */,
+				2A25091B28E66A8F009F6ED2 /* ContentViewModel.swift in Sources */,
+				2A25091F28E66B6A009F6ED2 /* AddRemindersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +282,7 @@
 				DEVELOPMENT_TEAM = NS2U56N5HL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSRemindersUsageDescription = "リマインダーを取得したい";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +312,7 @@
 				DEVELOPMENT_TEAM = NS2U56N5HL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSRemindersUsageDescription = "リマインダーを取得したい";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
