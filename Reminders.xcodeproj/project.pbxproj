@@ -14,6 +14,7 @@
 		2A25091B28E66A8F009F6ED2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25091A28E66A8F009F6ED2 /* ContentViewModel.swift */; };
 		2A25091D28E66AB7009F6ED2 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25091C28E66AB7009F6ED2 /* EventManager.swift */; };
 		2A25091F28E66B6A009F6ED2 /* AddRemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25091E28E66B6A009F6ED2 /* AddRemindersView.swift */; };
+		2AEC146928E7463E00A8C78D /* RemindersColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC146828E7463E00A8C78D /* RemindersColumn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2A25091A28E66A8F009F6ED2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		2A25091C28E66AB7009F6ED2 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		2A25091E28E66B6A009F6ED2 /* AddRemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemindersView.swift; sourceTree = "<group>"; };
+		2AEC146828E7463E00A8C78D /* RemindersColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersColumn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				2A25090C28E66A5E009F6ED2 /* RemindersApp.swift */,
 				2A25090E28E66A5E009F6ED2 /* ContentView.swift */,
+				2AEC146828E7463E00A8C78D /* RemindersColumn.swift */,
 				2A25091E28E66B6A009F6ED2 /* AddRemindersView.swift */,
 				2A25091A28E66A8F009F6ED2 /* ContentViewModel.swift */,
 				2A25091C28E66AB7009F6ED2 /* EventManager.swift */,
@@ -151,6 +154,7 @@
 				2A25091D28E66AB7009F6ED2 /* EventManager.swift in Sources */,
 				2A25091B28E66A8F009F6ED2 /* ContentViewModel.swift in Sources */,
 				2A25091F28E66B6A009F6ED2 /* AddRemindersView.swift in Sources */,
+				2AEC146928E7463E00A8C78D /* RemindersColumn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

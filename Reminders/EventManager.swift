@@ -3,66 +3,44 @@
 //  Reminders
 //
 //  Created by Ryo on 2022/09/30.
-//
+//https://developer.apple.com/documentation/eventkit
 
 import Foundation
 import EventKit
 
 class EventManager {
+    // ストアを初期化する。
+    var store: EKEventStore
     
-    // ストアの初期化を行う。
-    var store = EKEventStore()
-    
-    var data : [EKReminder]
+    //FetchingRemindersの中に入れるとダメな理由？
+    var hoge: [EKReminder] = []
     
     init() {
-        // リマインダーへのアクセスを要求する。
+        store = EKEventStore()
+        
+        //リマインダーへのアクセスを要求する。
         store.requestAccess(to: .reminder) { granted, error in
             // リクエストに対するレスポンスを処理する。
         }
-        
-        //データの取得
-        var predicate: NSPredicate? = store.predicateForReminders(in: nil)
-        
-        
-        
-        store.fetchReminders(matching: predicate!) { reminders in
-            data += reminders!
-            print(reminders)
-        }
-        print(data)
     }
     
-    
-    
-    //    func FetchingRemindersList(){
-    //        list = store.calendars(for: .reminder)
-    //    }
-    
-    //リマインダーデータの取得
-    func FetchingReminders(){
-        var predicate: NSPredicate? = store.predicateForReminders(in: nil)
-        
-        
-        
-        store.fetchReminders(matching: predicate!) { reminders in
-            self.data += reminders!
-            //            print(reminders)
+    func FetchingReminders() -> [EKReminder]{
+       
+//        var predicate: NSPredicate? = store.predicateForReminders(in: nil)
+        //実験用のリストに接続
+        var predicate: NSPredicate? = store.predicateForReminders(in: [store.calendars(for: .reminder).first!])
+        store.calendars(for: .reminder)
+        if let predicate {
+            store.fetchReminders(matching: predicate, completion: {(_ reminders: [Any]?) -> Void in
+                //これを上になるとだめな理由？
+                self.hoge = []
+                for reminder: EKReminder? in reminders as? [EKReminder?] ?? [EKReminder?]() {
+                    // リマインダーのたびに何かをする。
+                    self.hoge += [reminder!]
+                }
+                print(self.hoge)
+            })
         }
-        
-        print(data)
-        
-        //        if let aPredicate = predicate {
-        //            store.fetchReminders(matching: aPredicate, completion: {(_ reminders: [Any]?) -> Void in
-        //                for reminder: EKReminder? in reminders as? [EKReminder?] ?? [EKReminder?]() {
-        //                    // リマインダーのたびに何かする。
-        ////                    print(reminders)
-        //                    self.data += reminders!
-        //
-        //                }
-        //            })
-        //        }
+        return hoge
     }
-    
-    
 }

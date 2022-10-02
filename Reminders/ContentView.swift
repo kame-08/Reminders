@@ -16,8 +16,14 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.eventManager.data,id: \.self) { reminders in
-                    Text(reminders.title)
+                ForEach(viewModel.data, id: \.self) { reminders in
+                    //trueの場所に表示、非表示のフラグ
+                    if reminders.isCompleted && true {
+                        
+                    }else{
+                        RemindersColumn(hogesss: reminders)
+                    }
+                    
                     
                 }
                 
@@ -65,7 +71,7 @@ struct ContentView: View {
             
             .refreshable {
                 //TODO: リストの更新
-                //                viewModel.update()
+                viewModel.FetchingReminders()
             }
             .keyboardShortcut("R", modifiers: [.command])
         }
