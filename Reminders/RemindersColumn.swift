@@ -12,15 +12,9 @@ struct RemindersColumn: View {
     var hogesss:EKReminder
     var body: some View {
         HStack {
-
-                Image(systemName: hogesss.isCompleted ? "circle.inset.filled" : "circle" )
+            Image(systemName: hogesss.isCompleted ? "circle.inset.filled" : "circle" )
                 .foregroundColor(hogesss.isCompleted  ? Color.accentColor : Color.primary)
-                Text(hogesss.title)
-            
-            
-
-            
-            
+            Text(hogesss.title)   
         }
     }
 }

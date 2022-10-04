@@ -9,18 +9,14 @@ import Foundation
 import EventKit
 
 class ContentViewModel: ObservableObject {
-    @Published var eventManager = EventManager()
-    @Published  var menu = "全て表示"
+//    @Published
+    var eventManager = EventManager()
+    @Published var menu = "全て"
     @Published var data:[EKReminder] = []
-    
-    init(){
-        data = eventManager.FetchingReminders()
-    }
-    
     
     func FetchingReminders(){
         data = eventManager.FetchingReminders()
-//        print(eventManager.FetchingReminders())
+        //print(eventManager.FetchingReminders())
     }
     
 }

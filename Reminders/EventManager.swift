@@ -24,9 +24,8 @@ class EventManager {
         }
     }
     
-    func FetchingReminders() -> [EKReminder]{
-       
-//        var predicate: NSPredicate? = store.predicateForReminders(in: nil)
+    func FetchingReminders() -> [EKReminder]{        
+        //var predicate: NSPredicate? = store.predicateForReminders(in: nil)
         //実験用のリストに接続
         var predicate: NSPredicate? = store.predicateForReminders(in: [store.calendars(for: .reminder).first!])
         store.calendars(for: .reminder)
