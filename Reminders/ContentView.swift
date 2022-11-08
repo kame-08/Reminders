@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     //    @StateObject var viewModel = ContentViewModel()
-    @ObservedObject var viewModel = ContentViewModel()
+    @StateObject var viewModel = ContentViewModel()
     
     //AddRemindersViewの表示非表示
     @State var sheet = false
@@ -30,6 +30,10 @@ struct ContentView: View {
                         RemindersColumn(hogesss: reminders)
                     }
                 }
+            }
+            .refreshable {
+//リストの更新
+                viewModel.FetchingReminders()
             }
             .navigationTitle("リマインダー")
             .toolbar {
@@ -106,17 +110,17 @@ struct ContentView: View {
                     .presentationDetents([.medium])
             })
             
-            .refreshable {
-                //リストの更新
-                viewModel.FetchingReminders()
-            }
+//            .refreshable {
+//                //リストの更新
+//                viewModel.FetchingReminders()
+//            }
             .keyboardShortcut("R", modifiers: [.command])
         }
-        //        .onAppear(){
-        //
-        //        }
         .task {
-            viewModel.data = viewModel.eventManager.FetchingReminders()
+//            viewModel.data = viewModel.eventManager.FetchingReminders()
+//            print(viewModel.data)
+//            print("fuga")
+            viewModel.FetchingReminders()
         }
     }
 }

@@ -22,6 +22,8 @@ class EventManager {
         store.requestAccess(to: .reminder) { granted, error in
             // リクエストに対するレスポンスを処理する。
         }
+        //initの中で呼び出さないと初回起動時に表示されない(onAppear, taskだとダメっぽい?)
+        FetchingReminders()
     }
     
     func FetchingReminders() -> [EKReminder]{        
